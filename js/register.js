@@ -6,7 +6,7 @@ function Register(name,max){
 }
 
 Register.prototype.set = function(val){
-  this.a = val;
+  this.a = parse(val);
   if(__DEBUG__)console.log(this.name + " assigned : "+val);
   if(val > this.max){
     return this.overflow();
